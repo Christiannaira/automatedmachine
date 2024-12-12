@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
@@ -9,7 +10,18 @@ public class Main {
 
         storeAccounts(userAccounts);
 
-        System.out.println(userAccounts);
+        Scanner askUser = new Scanner(System.in);
+
+        while (true) {
+
+            System.out.println("Enter your Account Name: ");
+            String accountName = askUser.nextLine();
+
+            System.out.println("Enter your Account PIN Number: ");
+            String accountPin = askUser.nextLine();
+
+
+        }
 
     }
 
