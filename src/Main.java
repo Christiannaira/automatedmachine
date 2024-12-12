@@ -20,6 +20,7 @@ public class Main {
             System.out.println("Enter your Account PIN Number: ");
             String accountPin = askUser.nextLine();
 
+            checkUserAccount(userAccounts, accountName, accountPin);
 
         }
 
@@ -57,6 +58,12 @@ public class Main {
         userAccounts.add(user3);
         userAccounts.add(user4);
         userAccounts.add(user5);
+
+    }
+
+    static void checkUserAccount(ArrayList<ArrayList<String>> userAccounts, String accountName, String accountPin) {
+
+
 
     }
 
