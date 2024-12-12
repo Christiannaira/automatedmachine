@@ -63,7 +63,27 @@ public class Main {
 
     static void checkUserAccount(ArrayList<ArrayList<String>> userAccounts, String accountName, String accountPin) {
 
+        boolean status = false;
 
+        for (ArrayList<String> userAccount: userAccounts) {
+
+            if (userAccount.get(0).toLowerCase().equals(accountName.toLowerCase()) && userAccount.get(1).equals(accountPin)) {
+
+                System.out.println("====== Successfully logged in! ======\n");
+
+            } else {
+
+                status = true;
+
+            }
+
+        }
+
+        if (status) {
+
+            System.out.println("====== Wrong credentials! ======"); // print out if the user input wrong account name and pin
+
+        }
 
     }
 
