@@ -14,13 +14,13 @@ public class Main {
 
         while (true) {
 
-            System.out.println("Enter your Account Name: ");
-            String accountName = askUser.nextLine();
+            System.out.println("Enter your Account Name: "); // ask the user to enter his account name
+            String accountName = askUser.nextLine(); // storing the user input account name value
 
-            System.out.println("Enter your Account PIN Number: ");
-            String accountPin = askUser.nextLine();
+            System.out.println("Enter your Account PIN Number: "); // ask the user to enter his account Pin
+            String accountPin = askUser.nextLine(); // storing the user input account Pin value
 
-            checkUserAccount(userAccounts, accountName, accountPin);
+            checkUserAccount(userAccounts, accountName, accountPin); // check the user account if existing
 
         }
 
@@ -65,6 +65,7 @@ public class Main {
 
         boolean status = false;
 
+        // loop the user account lists to check if the user input account name and account pin are existing
         for (ArrayList<String> userAccount: userAccounts) {
 
             if (userAccount.get(0).toLowerCase().equals(accountName.toLowerCase()) && userAccount.get(1).equals(accountPin)) {
@@ -79,6 +80,7 @@ public class Main {
 
         }
 
+        // if the user account was not found, this will be output, it will return back asking the user account name and account pin
         if (status) {
 
             System.out.println("====== Wrong credentials! ======"); // print out if the user input wrong account name and pin
