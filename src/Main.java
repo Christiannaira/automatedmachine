@@ -6,11 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<ArrayList<String>> userAccounts = new ArrayList<>();
+        ArrayList<ArrayList<String>> userAccounts = new ArrayList<>(); //userAccount Lists
 
-        storeAccounts(userAccounts);
+        storeAccounts(userAccounts); // add default user accounts
 
-        Scanner askUser = new Scanner(System.in);
+        Scanner askUser = new Scanner(System.in); // ask the user to enter login credentials
 
         while (true) {
 
@@ -68,6 +68,8 @@ public class Main {
         // loop the user account lists to check if the user input account name and account pin are existing
         for (ArrayList<String> userAccount: userAccounts) {
 
+            String transactionType = ""; // store the transaction type of user input
+
             if (userAccount.get(0).toLowerCase().equals(accountName.toLowerCase()) && userAccount.get(1).equals(accountPin)) {
 
                 System.out.println("====== Successfully logged in! ======\n");
@@ -86,6 +88,12 @@ public class Main {
             System.out.println("====== Wrong credentials! ======"); // print out if the user input wrong account name and pin
 
         }
+
+    }
+
+    static void userAccountOptions(ArrayList<String> userAccount, String accountName, String accountPin, String transactionType) {
+
+
 
     }
 
