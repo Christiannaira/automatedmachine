@@ -25,6 +25,11 @@ public class Main {
 
     }
 
+    static void addAccount(){
+
+
+    }
+
     static void storeAccounts(ArrayList<ArrayList<String>> userAccounts) {
 
         ArrayList<String> user1 = new ArrayList<>(); // first user account added
